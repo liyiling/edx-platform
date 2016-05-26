@@ -14,7 +14,7 @@ class ThemeRedirectMiddleware(object):
         Checks request has been made from theme, redirect the user from expired
         courses' about page to all courses page by cache or Redirect Model.
         """
-        if not is_request_in_themed_site():
+        if is_request_in_themed_site():
             host = request.META['HTTP_HOST']
             redirect_from = ''.join(('http', ('', 's')[request.is_secure()], '://', host, request.path))
             cache_key = "theme_redirect.{host}".format(host=host)
