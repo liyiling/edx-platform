@@ -1157,7 +1157,7 @@ MIDDLEWARE_CLASSES = (
     'courseware.middleware.RedirectUnenrolledMiddleware',
 
     # to redirected expired courses' about page to all courses page
-    'courseware.middleware.RedirectExpiredCoursesMiddleware',
+    'openedx.core.djangoapps.theming.middleware.ThemeRedirectMiddleware',
 
     'course_wiki.middleware.WikiAccessMiddleware',
 
@@ -2898,6 +2898,6 @@ AUTH_DOCUMENTATION_URL = 'http://edx.readthedocs.org/projects/edx-platform-api/e
 # Affiliate cookie tracking
 AFFILIATE_COOKIE_NAME = 'affiliate_id'
 
-############## Settings for redirect URL for WhiteLabel Websites ###############
+############## Settings for redirect URL for Themes ###############
 
-REDIRECT_URL_CACHE_TIMEOUT = 3600  # The length of time we cache REDIRECTED URL
+THEME_REDIRECT_CACHE_TIMEOUT = 3600  # The length of time we cache REDIRECTED URL for themes
