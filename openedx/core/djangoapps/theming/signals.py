@@ -6,7 +6,7 @@ from django.contrib.redirects.models import Redirect
 
 
 @receiver(post_save, sender=Redirect)
-def clear_cache(sender, instance, **kwargs):
+def clear_theme_redirect_cache(sender, instance, **kwargs):
     """
     Get the host from the instance.old_path and clear the cache of that host
     """
