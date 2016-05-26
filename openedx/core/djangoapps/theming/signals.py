@@ -12,3 +12,4 @@ def clear_cache(sender, instance, **kwargs):
     """
     cache_key = "theme_redirect.{host}".format(host=urlparse(instance.old_path).netloc)
     cache.delete(cache_key)
+

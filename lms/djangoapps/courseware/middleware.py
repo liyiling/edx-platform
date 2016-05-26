@@ -4,6 +4,7 @@ Middleware for the courseware app
 
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
+
 from courseware.courses import UserNotEnrolled
 
 
